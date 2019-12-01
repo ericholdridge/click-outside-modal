@@ -1,0 +1,108 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.card-section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: lightblue;
+}
+
+.card-section .container .cards {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-section .container .cards .card {
+  width: 100%;
+  max-width: 320px;
+  background-color: white;
+  padding: 12px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-section .container .cards .card img {
+  width: 100%;
+  display: block;
+}
+
+.card-section .container .cards .card button {
+  background-color: pink;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.card-section .modal-outer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
+.card-section .modal-outer.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.card-section .modal-outer.open .modal-inner {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.card-section .modal-outer .modal-inner {
+  max-width: 600px;
+  min-width: 400px;
+  min-height: 200px;
+  background-color: white;
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+  padding: 20px;
+}
+
+.card-section .modal-outer .modal-inner img {
+  width: 100%;
+}
+/*# sourceMappingURL=styles.css.map */
